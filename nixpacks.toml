@@ -21,6 +21,6 @@
 
 [start]
     cmd = '''
-    export ANGULAR_OUTPUT_PATH=$(jq -r ".projects[] | .architect.build.options.outputPath" angular.json)
-    exec caddy run --config Caddyfile --adapter caddyfile 2>&1
+    export ANGULAR_OUTPUT_PATH=$(jq -r ".projects[] | .architect.build.options.outputPath" angular.json);
+    caddy run --config Caddyfile --adapter caddyfile 2>&1
     '''
